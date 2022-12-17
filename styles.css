@@ -13,18 +13,20 @@
 #div_container {
     display: flex;
     background-color: red;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     width: 50vw;
     flex-direction: column;
-}
-
-#div_container hr {
-    width: 100%;
+    border: 2px solid black;
 }
 
 .div-line{
     display: flex;
     justify-content: space-around;
+}
+
+.div-pixel {
+    width: 100%;
+    text-align: center;
 }
 
 .selected {
