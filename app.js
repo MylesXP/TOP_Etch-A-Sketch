@@ -5,11 +5,11 @@ let pixelContainer = document.getElementById('div_container');
 // Creating Div 'Pixels' for 16x16 Grid
 function createPixels () {
     let pixelLine = document.createElement('div');
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 40; i++) {
         let pixel = document.createElement('div');
         pixelLine.appendChild(pixel);
         pixel.classList.add('div-pixel');
-        pixel.textContent = '1';
+        // pixel.textContent = ".";
     };
     pixelLine.classList.add('div-line');
     pixelContainer.appendChild(pixelLine);
@@ -26,7 +26,7 @@ function createPixels () {
 
 
 // Creating 16 Different Lines of Pixels, Containing 16 Pixels Each
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < 40; i++) {
     createPixels();
 };
 
