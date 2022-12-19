@@ -1,15 +1,6 @@
-/* * {
+* {
     box-sizing: border-box;
 }
-
-/* #content_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} */
-
-
 
 #content_container {
     display: flex;
@@ -21,7 +12,6 @@
 
 #div_container {
     display: grid;
-    /* grid-template-rows: repeat(32, auto); */
     background-color: red;
     max-width: 600px !important;
     max-height: 600px !important;
@@ -34,7 +24,7 @@
 
 .div-line {
     display: grid;
-    /* grid-template-columns: repeat(32, auto); */
+    
 }
 
 .div-pixel {
