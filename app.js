@@ -7,7 +7,7 @@ function defaultGrid () {
     for (let i = 0; i < 16; i++) {
         createPixels(16);
     };
-}
+};
 
 defaultGrid();
 
@@ -16,8 +16,8 @@ function resetButton () {
     let pixelContainerPixels = document.querySelectorAll(".div-pixel")
     for (const child of pixelContainerPixels){
         child.classList.remove('selected')
-    }
-}
+    };
+};
 
 // Capturing User Input & Passing it to the createPixels Function to Create Grid
 let userInput = function() {
@@ -25,22 +25,22 @@ let userInput = function() {
     let input = Number(prompt('Enter a Number Up to 100'));
     if (input > 100) {
         alert('Enter a valid number');
-        defaultGrid()
+        defaultGrid();
     } else if (!input) {
         alert('Enter a number');
-        defaultGrid()
+        defaultGrid();
     } else if (input === 0) {
         alert('0 is invalid. Please Enter a Valid Number');
-        defaultGrid()
+        defaultGrid();
     }  else if (typeof input === 'string') {
         alert('Enter a number');
-        defaultGrid()
+        defaultGrid();
     }
     else {
         for (let i = 0; i < input; i++) {
             createPixels(input);
         };
-    }
+    };
 };
 
 
@@ -57,17 +57,17 @@ function createPixels (Input) {
 
     // Grid Creation Logic
     pixelLine.classList.add('div-line');
-    pixelLine.style = `grid-template-columns: repeat(${Input}, auto)`
+    pixelLine.style = `grid-template-columns: repeat(${Input}, auto)`;
     pixelContainer.appendChild(pixelLine);
-    pixelContainer.style = `grid-template-rows: repeat(${Input}, auto)`
+    pixelContainer.style = `grid-template-rows: repeat(${Input}, auto)`;
 
     // 'Drawing' Logic
-    let pixelLineChildren = pixelLine.childNodes
+    let pixelLineChildren = pixelLine.childNodes;
     for (const child of pixelLineChildren){
         child.addEventListener('mouseover', () => {
             child.classList.add('selected');
         });
-    }
+    };
 };
 
 
